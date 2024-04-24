@@ -42,6 +42,10 @@ spec:
         - name: {{ . }}
       {{- end }}
       {{- end }}
+      serviceAccountName: "{{ .Values.serviceaccount.name }}"
+      serviceAccount: "{{ .Values.serviceaccount.name }}"
+      securityContext:
+        runAsUser: 0
       containers:
       - image: "{{ .Values.image.proxy.repository }}:{{ .Values.image.proxy.tag }}"
         imagePullPolicy: "{{ .Values.image.proxy.pullPolicy }}"
