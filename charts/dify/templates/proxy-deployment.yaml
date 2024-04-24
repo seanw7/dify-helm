@@ -42,8 +42,8 @@ spec:
         - name: {{ . }}
       {{- end }}
       {{- end }}
-      serviceAccountName: "{{ .Values.serviceaccount.name }}"
-      serviceAccount: "{{ .Values.serviceaccount.name }}"
+      serviceAccountName: "{{ .Values.serviceAccount.name }}"
+      serviceAccount: "{{ .Values.serviceAccount.name }}"
       securityContext:
         runAsUser: 0
       containers:
